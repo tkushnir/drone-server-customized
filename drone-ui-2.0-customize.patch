@@ -1,0 +1,140 @@
+diff --git a/src/components/shared/console/console.module.scss b/src/components/shared/console/console.module.scss
+index ca38524..398d9b2 100644
+--- a/src/components/shared/console/console.module.scss
++++ b/src/components/shared/console/console.module.scss
+@@ -3,8 +3,7 @@
+ 
+ .wrapper {
+   max-width: 100%;
+-  color: #f3f3fa;
+-  background-color: #0b0b0d;
++  color: #0c0c05;
+   position: relative;
+   display: flex;
+   flex-flow: column;
+@@ -31,7 +30,7 @@
+     padding-bottom: 13px;
+     padding-left: 27px;
+     padding-right: 25px;
+-    border-bottom: 1px solid #22222a;
++    border-bottom: 1px solid rgba(0,0,0,.1);
+     border-radius: inherit;
+     background-color: inherit;
+     z-index: 2;
+@@ -45,12 +44,12 @@
+   }
+   .controls {
+     svg {
+-      color: #b0b1c3;
++      color: $color-gray-500;
+       width: 22px;
+       height: 22px;
+       transition: color 0.2s ease;
+       &:hover {
+-        color: #fff;
++        color: #0278d5;
+       }
+     }
+     & > * + * {
+@@ -69,7 +68,7 @@
+     line-height: 24px;
+     h3 {
+       font-weight: 500;
+-      color: #b0b1c3;
++      color: $color-gray-700;
+       font-size: 14px;
+       line-height: 24px;
+       margin-right: 10px;
+@@ -116,7 +115,7 @@
+   font-size: 12px;
+   line-height: 20px;
+   letter-spacing: 0.2px;
+-  color: #6b6d85;
++  color: #9493a3;
+   @include sm-down {
+     padding-right: 20px;
+   }
+@@ -135,13 +134,13 @@
+   font-size: 12px;
+   line-height: 20px;
+   letter-spacing: 0.2px;
+-  color: #6b6d85;
++  color: #9493a3;
+ }
+ 
+ .footer {
+   padding-left: 27px;
+   padding-right: 25px;
+-  background: #22222a;
++  background: #e6faff;
+   border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+   display: flex;
+   justify-content: space-between;
+@@ -155,20 +154,17 @@
+   }
+   .summary-title {
+     margin-bottom: 10px;
+-    color: #9293ab;
++    color: #5b5a64;
+     flex: 1 1 100%;
+   }
+   .summary-info {
+     display: flex;
+     align-items: center;
+-    color: #f3f3fa;
++    color: #323237;
+     flex: 1;
+   }
+   .summary-status {
+     margin-right: 15px;
+-    svg {
+-      color: #22222a;
+-    }
+   }
+   .summary-controls {
+     display: flex;
+@@ -178,7 +174,7 @@
+     font-size: 20px;
+     right: 25px;
+     bottom: 16px;
+-    color: #6b6d85;
++    color: #9493a3;
+     transform: translateX(5px);
+   }
+ 
+@@ -189,27 +185,29 @@
+     line-height: 32px;
+     border-radius: 8px;
+     padding: 0px 18px;
+-    background: #4f5162;
++    background: #babdd2;
+     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.32);
+     transition: all 0.2s ease;
+     text-decoration: none;
+-    color: rgba(255, 255, 255, 0.8);
++    color: #323237;
+     &:hover {
+-      color: #fff;
++      color: #0278d5;
+     }
+   }
+ }
+ 
+ .btn-show-all-logs {
+-  color: #fff;
+-  background: #22222a;
++  background: #e6faff;
+   border-radius: 6px;
+   font-size: 12px;
+   line-height: 16px;
+-  color: #b0b1c4;
++  color: #323237;
+   font-family: $font-family-code;
+   padding: 6px 9px;
+   width: 100%;
+   text-align: center;
+   margin-bottom: 5px;
++  &:hover {
++    color: #0278d5;
++  }
+ }
