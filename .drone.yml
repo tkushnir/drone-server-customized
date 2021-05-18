@@ -99,7 +99,4 @@ steps:
       exclude:
       - pull_request
 
-node:
-  cores: 4
-
 ...
