@@ -58,11 +58,13 @@ steps:
   - go get github.com/bradrydzewski/togo
   - rm -vf dist/dist_gen.go
   - go generate ./dist
-  - go mod init github.com/drone/drone-ui
 
 - name: replace drone-ui
   image: golang:1.14.4
   commands:
+  - cd $DRONE_WORKSPACE_BASE/web
+  - go mod init github.com/drone/drone-ui
+  - cd $DRONE_WORKSPACE_BASE
   - go mod edit -replace=github.com/drone/drone-ui=./web
 
 - name: test
