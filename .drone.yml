@@ -88,9 +88,11 @@ steps:
   settings:
     tags: [ latest, "2", "2.0", "2.0.0" ]
     dockerfile: docker/Dockerfile.server.linux.amd64
-    repo: registry.example.com/drone/drone
-    registry: registry.example.com
-    insecure: true
+    repo: drone/drone-server-customized
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
     dry_run: true
   when:
     repo:
