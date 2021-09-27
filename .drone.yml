@@ -84,7 +84,7 @@ steps:
     GOOS: linux
 
 - name: publish
-  image: plugins/docker:18
+  image: plugins/docker:19
   settings:
     tags: [ latest, "2", "2.4", "2.4.0" ]
     dockerfile: docker/Dockerfile.server.linux.amd64
