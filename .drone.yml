@@ -14,7 +14,7 @@ steps:
 - name: clone
   image: drone/git
   commands:
-  - export DRONE_TAG=v2.0.0
+  - export DRONE_TAG=v2.4.0
   - export DRONE_COMMIT_REF=refs/tags/$DRONE_TAG
   - export DRONE_REMOTE_URL=https://github.com/drone/drone.git
   - clone
@@ -22,9 +22,9 @@ steps:
 - name: clone drone-ui
   image: drone/git
   commands:
-  - export DRONE_COMMIT_BRANCH=drone2
+  - export DRONE_COMMIT_BRANCH=main
   - export DRONE_COMMIT_REF=refs/heads/$DRONE_COMMIT_BRANCH
-  - export DRONE_COMMIT_SHA=d96f1e26d4482663535cfc913f650956c914f27f
+  - export DRONE_COMMIT_SHA=661d4847784209f405342a18dbb8434bbb9094a7
   - export DRONE_REMOTE_URL=https://github.com/drone/drone-ui.git
   - export DRONE_WORKSPACE=$DRONE_WORKSPACE_BASE/web
   - clone
@@ -86,7 +86,7 @@ steps:
 - name: publish
   image: plugins/docker:18
   settings:
-    tags: [ latest, "2", "2.0", "2.0.0" ]
+    tags: [ latest, "2", "2.4", "2.4.0" ]
     dockerfile: docker/Dockerfile.server.linux.amd64
     repo: drone/drone-server-customized
     username:
