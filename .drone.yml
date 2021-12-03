@@ -14,17 +14,16 @@ steps:
 - name: clone
   image: drone/git
   commands:
-  - export DRONE_TAG=v2.4.0
+  - export DRONE_TAG=v2.6.0
   - export DRONE_COMMIT_REF=refs/tags/$DRONE_TAG
-  - export DRONE_REMOTE_URL=https://github.com/drone/drone.git
+  - export DRONE_REMOTE_URL=https://github.com/harness/drone.git
   - clone
 
 - name: clone drone-ui
   image: drone/git
   commands:
-  - export DRONE_COMMIT_BRANCH=main
-  - export DRONE_COMMIT_REF=refs/heads/$DRONE_COMMIT_BRANCH
-  - export DRONE_COMMIT_SHA=661d4847784209f405342a18dbb8434bbb9094a7
+  - export DRONE_TAG=v2.4.0
+  - export DRONE_COMMIT_REF=refs/tags/$DRONE_TAG
   - export DRONE_REMOTE_URL=https://github.com/drone/drone-ui.git
   - export DRONE_WORKSPACE=$DRONE_WORKSPACE_BASE/web
   - clone

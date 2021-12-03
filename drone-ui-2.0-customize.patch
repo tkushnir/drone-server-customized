@@ -1,5 +1,5 @@
 diff --git a/src/components/shared/console/console.module.scss b/src/components/shared/console/console.module.scss
-index ca38524..398d9b2 100644
+index a208e82..40be33b 100644
 --- a/src/components/shared/console/console.module.scss
 +++ b/src/components/shared/console/console.module.scss
 @@ -3,8 +3,7 @@
@@ -45,7 +45,7 @@ index ca38524..398d9b2 100644
        font-size: 14px;
        line-height: 24px;
        margin-right: 10px;
-@@ -116,7 +115,7 @@
+@@ -117,7 +116,7 @@
    font-size: 12px;
    line-height: 20px;
    letter-spacing: 0.2px;
@@ -54,7 +54,7 @@ index ca38524..398d9b2 100644
    @include sm-down {
      padding-right: 20px;
    }
-@@ -135,13 +134,13 @@
+@@ -137,13 +136,13 @@
    font-size: 12px;
    line-height: 20px;
    letter-spacing: 0.2px;
@@ -70,7 +70,7 @@ index ca38524..398d9b2 100644
    border-top: 1px solid hsla(0, 0%, 100%, 0.05);
    display: flex;
    justify-content: space-between;
-@@ -155,20 +154,17 @@
+@@ -157,20 +156,17 @@
    }
    .summary-title {
      margin-bottom: 10px;
@@ -93,7 +93,7 @@ index ca38524..398d9b2 100644
    }
    .summary-controls {
      display: flex;
-@@ -178,7 +174,7 @@
+@@ -180,7 +176,7 @@
      font-size: 20px;
      right: 25px;
      bottom: 16px;
@@ -102,7 +102,7 @@ index ca38524..398d9b2 100644
      transform: translateX(5px);
    }
  
-@@ -189,27 +185,29 @@
+@@ -191,27 +187,29 @@
      line-height: 32px;
      border-radius: 8px;
      padding: 0px 18px;
